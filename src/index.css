@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+body {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.852);
+  overflow-x: hidden;
+  color: aliceblue;
+}
+
+#navigation a:not(:last-child) {
+  @apply duration-200 hover:cursor-pointer hover:contrast-125 text-nowrap;
+  display: inline-flex;
+  /* align-items: center; */
+}
+
+#navigation a:not(:last-child)::after {
+  content: "|";
+  color: white;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+form input,
+textarea {
+  @apply text-white border-2 border-white rounded-lg;
+  /* width: 10rem; */
+  width: clamp(10rem, 15rem, 30rem);
+  field-sizing: content;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+form textarea {
+  min-height: 8em;
+}
+
+form button:focus,
+form button:active,
+form textarea:focus,
+form input:focus,
+form textarea:active,
+form input:active {
+  @apply outline-none;
+  border-color: palevioletred;
+}
