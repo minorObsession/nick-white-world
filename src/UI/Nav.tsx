@@ -1,14 +1,16 @@
 import { NavLink } from "react-router";
 
 function NavSeparator() {
-  return <div className="h-4 w-[2px] bg-neon-green/30 mx-2 md:mx-3 lg:mx-4" />;
+  return (
+    <div className="h-5 w-[2px] bg-neon-green/40 mx-2 md:mx-3 lg:mx-4 rounded-full" />
+  );
 }
 
 function Nav() {
   return (
     <nav
       id="navigation"
-      className="flex h-[4rem] items-center gap-1 md:gap-2 lg:gap-3 justify-center w-full text-display bg-gradient py-[0.5rem_!important] px-[1rem_!important] rounded-full shadow-lg"
+      className="flex h-[4rem] lg:h-[5rem] items-center gap-1 sm:gap-2 md:gap-3 lg:gap-4 justify-center w-full text-display bg-gradient py-[0.5rem_!important] px-[1rem_!important] rounded-xl shadow-lg"
     >
       <NavLink
         to="/"

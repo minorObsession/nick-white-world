@@ -21,7 +21,7 @@ function ContactMe() {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-3">
+    <div className="flex flex-col items-center justify-center gap-3">
       <form
         className=" bg-gradient-to-br from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-8 backdrop-blur-sm p-[3rem_!important] rounded-2xl shadow-lg"
         onSubmit={handleSubmit}

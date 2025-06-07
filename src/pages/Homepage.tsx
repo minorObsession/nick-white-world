@@ -1,6 +1,6 @@
 function Homepage() {
   return (
-    <div className="flex w-full sm:flex-row flex-col">
+    <div className="flex sm:flex-row flex-col">
       {/* Artist Introduction - Left */}
       <article className="py-[2rem_!important] px-[1rem_!important] order-2 sm:order-1 sm:flex-1/3 flex flex-col gap-4 lg:gap-5 justify-center items-center lg:items-end bg-gradient-to-br from-deep-navy to-dark-slate rounded-lg ">
         <h1 className="text-display text-right lg:pr-[1rem_!important] text-nowrap text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter md:tracking-tight lg:tracking-normal mb-4 bg-gradient-to-r from-neon-green/90 to-neon-green/70 bg-clip-text text-transparent">
