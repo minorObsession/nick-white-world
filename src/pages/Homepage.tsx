@@ -1,3 +1,5 @@
+import coverImage from "../cover.png";
+
 function Homepage() {
   return (
     <div className="flex sm:flex-row flex-col">
@@ -27,7 +29,7 @@ function Homepage() {
       <article className="order-1 sm:order-2 sm:flex-1/3">
         <img
           className="object-cover h-full rounded-lg"
-          src="/public/cover.png"
+          src={coverImage}
           alt="Nick White Cover Photo"
         />
       </article>
