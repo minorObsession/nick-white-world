@@ -39,6 +39,10 @@
   .article-hover-effect {
     @apply transition-all duration-200 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)];
   }
+
+  .bg-gradient {
+    @apply bg-gradient-to-br from-deep-navy to-dark-slate backdrop-blur-sm;
+  }
 }
 
 * {
@@ -68,32 +72,36 @@ body {
   color: aliceblue;
 }
 
-#navigation a:not(:last-child) {
-  @apply duration-200 hover:cursor-pointer hover:contrast-125 text-nowrap;
-  display: inline-flex;
-  /* align-items: center; */
+#navigation {
+  @apply text-neon-green text-lg md:text-xl lg:text-2xl;
 }
 
-#navigation a:not(:last-child)::after {
-  content: "|";
-  color: var(--color-neon-green);
-  opacity: 0.5;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.nav-button {
+  @apply text-neon-green transition-all duration-300;
+}
+
+.nav-button.active {
+  @apply text-white bg-neon-green/20 border-2 border-neon-green rounded-xl px-2 py-0.5;
+}
+
+#navigation a {
+  @apply duration-150 hover:cursor-pointer hover:contrast-125 text-nowrap;
+  display: inline-flex;
 }
 
 form input,
 textarea {
   @apply text-white border-2 border-white rounded-lg;
   /* width: 10rem; */
-  width: clamp(10rem, 15rem, 30rem);
+  width: clamp(15rem, 30vw, 40rem);
   field-sizing: content;
   font-size: 1rem;
   padding: 0.5rem;
+  border-color: rgba(57, 255, 20, 0.5);
 }
 
 form textarea {
-  min-height: 8em;
+  /* min-height: 8em; */
 }
 
 form button:focus,
@@ -103,7 +111,7 @@ form input:focus,
 form textarea:active,
 form input:active {
   @apply outline-none;
-  border-color: palevioletred;
+  border-color: var(--color-neon-green);
 }
 
 @theme {
@@ -122,4 +130,11 @@ form input:active {
   --color-dark-slate: rgb(20, 20, 30);
   --color-deep-navy: rgb(10, 10, 40);
   --color-rich-gray: rgb(30, 30, 35);
+
+  /* Gradients */
+  --gradient-nav: linear-gradient(
+    to bottom right,
+    var(--color-deep-navy),
+    var(--color-dark-slate)
+  );
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FormRow from "../UI/FormRow";
 
 function ContactMe() {
   const [formData, setFormData] = useState({
@@ -20,46 +21,48 @@ function ContactMe() {
   };
 
   return (
-    <form
-      className="flex flex-col items-center justify-center w-full gap-8 "
-      onSubmit={handleSubmit}
-    >
-      <div className="flex flex-col gap-2 text-lg">
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
+    <div className="w-full flex flex-col items-center justify-center gap-3">
+      <form
+        className=" bg-gradient-to-br from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-8 backdrop-blur-sm p-[3rem_!important] rounded-2xl shadow-lg"
+        onSubmit={handleSubmit}
+      >
+        <h1 className="text-display text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r text-nowrap from-neon-green/90 to-neon-green/70 bg-clip-text text-transparent">
+          Get in Touch
+        </h1>
+        <FormRow
+          label="Name"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
-          required
+          placeholder="Your name"
         />
-      </div>
-      <div className="flex flex-col gap-2 text-lg">
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
+        <FormRow
+          label="Email"
           id="email"
           name="email"
+          type="email"
           value={formData.email}
           onChange={handleChange}
-          required
+          placeholder="your.email@example.com"
         />
-      </div>
-      <div className="flex flex-col gap-2 text-lg">
-        <label htmlFor="message">Message:</label>
-        <textarea
+        <FormRow
+          label="Message"
           id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}
-          required
+          placeholder="Your message here..."
+          isTextArea
         />
-      </div>
-      <button className="w-full text-lg bg-red-300 rounded-lg " type="submit">
-        Send
-      </button>
-    </form>
+        <button
+          className="w-full text-lg font-bold tracking-wide btn-padding bg-neon-green text-dark-slate rounded-full transition-all border-2 border-neon-green/50 btn-hover-effect mt-4"
+          type="submit"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
   );
 }
 
