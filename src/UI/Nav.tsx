@@ -2,7 +2,10 @@ import { NavLink } from "react-router";
 
 function Nav() {
   return (
-    <nav id="navigation" className={`flex items-center justify-center w-full `}>
+    <nav
+      id="navigation"
+      className={`flex items-center justify-center w-full text-neon-green text-display text-lg md:text-xl lg:text-2xl`}
+    >
       <NavLink to="/">
         <span className="transition duration-200 hover:scale-105">Home</span>
       </NavLink>

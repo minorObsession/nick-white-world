@@ -21,7 +21,7 @@ function ContactMe() {
 
   return (
     <form
-      className="flex flex-col items-center justify-center w-full gap-8 bg-red-300"
+      className="flex flex-col items-center justify-center w-full gap-8 "
       onSubmit={handleSubmit}
     >
       <div className="flex flex-col gap-2 text-lg">

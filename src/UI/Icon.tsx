@@ -2,19 +2,26 @@ import type { IconType } from "react-icons";
 
 type IconProps = {
   icon: IconType;
-  href: string;
-  onClick: (link: string) => void;
+  onClick: () => void;
+  color?: string;
+  shadowColor?: string;
 };
 
-function Icon({ icon: IconComponent, href }: IconProps) {
-  const handleClickLink = (link: string) => {
-    window.open(link);
-  };
+function Icon({
+  icon: IconComponent,
+  onClick,
+  color = "text-neon-green",
+  shadowColor = "rgba(57,255,20,0.6)",
+}: IconProps) {
+  const shadowStyle = {
+    "--shadow-color": shadowColor,
+  } as React.CSSProperties;
 
   return (
     <IconComponent
-      onClick={() => handleClickLink(href)}
-      className="transition duration-200 hover:scale-110 hover:cursor-pointer hover:contrast-125"
+      onClick={onClick}
+      style={shadowStyle}
+      className={`transition hover:scale-120 hover:cursor-pointer hover:brightness-150 text-3xl ${color} hover:drop-shadow-[6px_6px_10px_var(--shadow-color)]`}
     />
   );
 }

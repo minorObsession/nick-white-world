@@ -1,4 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Outfit:wght@200;300;400;500;600;700&display=swap");
+
 @import "tailwindcss";
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+  }
+}
+
+@layer components {
+  .text-display {
+    font-family: var(--font-display) !important;
+  }
+
+  .text-accent {
+    font-family: var(--font-accent) !important;
+  }
+
+  .text-body {
+    font-family: var(--font-body) !important;
+  }
+
+  .btn-padding {
+    padding: 0.5rem 1.5rem !important;
+  }
+
+  .btn-hover-effect {
+    @apply transition-all duration-150 hover:drop-shadow-[3px_2px_2px_var(--color-neon-green)] hover:scale-110 hover:border-dark-slate hover:text-black;
+  }
+
+  .article-hover-effect {
+    @apply transition-all duration-200 hover:-translate-y-1 hover:scale-[1.05] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)];
+  }
+}
 
 * {
   margin: 0;
@@ -6,8 +47,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Font Families */
+  --font-display: "Syne", sans-serif; /* Bold, artistic headings */
+  --font-body: "Space Grotesk", sans-serif; /* Clean, modern body text */
+  --font-accent: "Outfit", sans-serif; /* Versatile accent font */
+}
+
 html {
   /* font-size: 62.5%; */
+  scroll-behavior: smooth;
+  color: #00ff55;
+  font-family: var(--font-body);
 }
 
 body {
@@ -25,7 +76,8 @@ body {
 
 #navigation a:not(:last-child)::after {
   content: "|";
-  color: white;
+  color: var(--color-neon-green);
+  opacity: 0.5;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -52,4 +104,22 @@ form textarea:active,
 form input:active {
   @apply outline-none;
   border-color: palevioletred;
+}
+
+@theme {
+  /* Primary Colors */
+  --color-neon-green: rgb(57, 255, 20);
+  --color-deep-purple: rgb(147, 20, 255);
+  --color-hot-pink: rgb(255, 20, 147);
+  --color-electric-blue: rgb(20, 147, 255);
+
+  /* Secondary Colors */
+  --color-soft-cyan: rgb(20, 255, 232);
+  --color-warm-orange: rgb(255, 147, 20);
+  --color-bright-yellow: rgb(255, 232, 20);
+
+  /* Neutral Colors */
+  --color-dark-slate: rgb(20, 20, 30);
+  --color-deep-navy: rgb(10, 10, 40);
+  --color-rich-gray: rgb(30, 30, 35);
 }
