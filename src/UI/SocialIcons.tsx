@@ -6,7 +6,7 @@ import Icon from "./Icon";
 
 function SocialIcons() {
   return (
-    <article id="social" className="flex gap-8 items-center">
+    <article id="social" className="flex gap-6 items-center">
       {/* ! add hrefs */}
       <Icon
         icon={SlSocialSpotify}

@@ -2,19 +2,6 @@
 
 @import "tailwindcss";
 
-@layer base {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-    font-family: var(--font-body);
-  }
-}
-
 @layer components {
   .text-display {
     font-family: var(--font-display) !important;
@@ -120,17 +107,16 @@ html {
   scroll-behavior: smooth;
   color: var(--color-primary);
   font-family: var(--font-body);
+
+  height: 100%;
 }
 
 body {
-  /* margin: 0 auto; */
   padding: 2rem;
   background-color: rgba(1, 0, 16, 1);
   overflow-x: hidden;
   color: aliceblue;
-  min-width: 100%;
-  max-width: 100%;
-  /* min-height: 100vh; */
+  min-height: 100svh;
 }
 
 #navigation {

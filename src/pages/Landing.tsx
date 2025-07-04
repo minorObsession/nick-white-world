@@ -8,16 +8,13 @@ function Landing() {
   return (
     <section
       id="landing"
-      className="flex flex-col items-center justify-center gap-6 md:gap-8"
+      className="flex flex-col items-center gap-4 md:gap-10 h-svh"
     >
       <SocialIcons />
       <Nav />
       <main className="flex w-full h-full ">
         <Outlet />
       </main>
-
-      {/* // ! display only when homepage  */}
-      {/* container for rest of landing content */}
     </section>
   );
 }
