@@ -24,11 +24,11 @@ function FormRow({
   isTextArea = false,
 }: FormRowProps) {
   const inputClasses =
-    "self-center px-4 py-3 border-2 border-neon-green/30 rounded-lg text-white focus:border-neon-green focus:outline-none transition-all duration-300";
+    "self-center px-4 py-3 border-2 border-primary/30 rounded-lg text-white focus:border-primary focus:outline-none transition-all duration-300";
   const textareaClasses = `${inputClasses} min-h-[150px] resize-y`;
 
   return (
-    <div className=" text-neon-green flex flex-col gap-2">
+    <div className=" text-primary flex flex-col gap-2">
       <label htmlFor={id} className="text-accent text-lg font-medium">
         {label}
       </label>

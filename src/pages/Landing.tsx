@@ -8,7 +8,7 @@ function Landing() {
   return (
     <section
       id="landing"
-      className="flex flex-col items-center justify-center gap-10"
+      className="flex flex-col items-center justify-center gap-6 md:gap-8"
     >
       <SocialIcons />
       <Nav />

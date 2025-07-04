@@ -1,38 +1,63 @@
-import coverImage from "../cover.png";
+import coverImage from "../images/nick_cover.jpeg";
 
 function Homepage() {
   return (
-    <div className="flex sm:flex-row flex-col">
-      {/* Artist Introduction - Left */}
-      <article className="py-[2rem_!important] px-[1rem_!important] order-2 sm:order-1 sm:flex-1/3 flex flex-col gap-4 lg:gap-5 justify-center items-center lg:items-end bg-gradient-to-br from-deep-navy to-dark-slate rounded-lg ">
-        <h1 className="text-display text-right lg:pr-[1rem_!important] text-nowrap text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter md:tracking-tight lg:tracking-normal mb-4 bg-gradient-to-r from-neon-green/90 to-neon-green/70 bg-clip-text text-transparent">
-          Nick White
-        </h1>
-        <h2 className="text-accent text-center text-xl md:text-2xl lg:text-3xl lg:text-right lg:pr-[1rem_!important] -translate-y-2">
-          Vocalist, Music Producer & Performer
-        </h2>
-        <p className="text-body text-base md:text-lg lg:text-xl text-center lg:text-right lg:pr-[1rem_!important]">
-          Crafting immersive sonic experiences that blend organic textures with
-          cutting-edge electronic elements. Based in Los Angeles, pushing the
-          boundaries of contemporary electronic music.
-        </p>
-        <div className="flex gap-5 mt-[1rem_!important]">
-          <button className="cursor-pointer tracking-wide text-lg font-bold btn-padding bg-neon-green text-dark-slate rounded-full transition-all border-2 border-neon-green/50 btn-hover-effect">
-            Listen Now
-          </button>
-          <button className="cursor-pointer tracking-wide text-lg font-bold btn-padding border-2 border-neon-green/50 rounded-full hover:bg-neon-green/80 hover:text-black hover:bg-opacity-20 transition-all btn-hover-effect">
-            Latest Release
-          </button>
-        </div>
-      </article>
-
-      <article className="order-1 sm:order-2 sm:flex-1/3">
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Image Container */}
+      <div className="absolute inset-0 z-0">
         <img
-          className="object-cover h-full rounded-lg"
+          className="object-scale-down scale-125 sm:scale-100 sm:object-cover w-full h-full rounded-lg object-[center_10%] sm:object-[5vw_-5vw] lg:object-[15vw_-10vw]"
           src={coverImage}
           alt="Nick White Cover Photo"
         />
-      </article>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/30 sm:bg-black/15 lg:bg-black/5"></div>
+      </div>
+
+      {/* Content Overlay */}
+      <div className="relative z-10 flex flex-col justify-center items-center h-full px-4 sm:px-8 lg:px-12">
+        {/* Mobile Layout (stacked) */}
+        <div className="flex flex-col items-center gap-6 sm:hidden">
+          <h1 className="text-display text-4xl sm:text-5xl font-bold tracking-tight text-center bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-lg text-nowrap line-clamp-1">
+            NICK WHITE
+          </h1>
+          <h2 className="text-accent text-xl sm:text-2xl text-center">
+            Find ur <span className="magic-text">Magic</span>.
+          </h2>
+          <div className="flex gap-4 mt-4">
+            <button className="cursor-pointer tracking-wide text-lg font-bold btn-padding bg-primary text-dark-slate rounded-full transition-all border-2 border-primary/50 btn-hover-effect">
+              Listen Now
+            </button>
+            <button className="cursor-pointer tracking-wide text-lg font-bold btn-padding border-2 border-primary/50 rounded-full hover:bg-primary/80 hover:text-black hover:bg-opacity-20 transition-all btn-hover-effect">
+              Latest Release
+            </button>
+          </div>
+        </div>
+
+        {/* Medium and Large Layout (overlapping) */}
+        <div className="hidden sm:flex w-full h-full relative">
+          {/* Left side content */}
+          <div className="flex-1 flex flex-col justify-center items-start gap-6 lg:gap-8">
+            <h1 className="text-display text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-lg leading-tight">
+              NICK WHITE
+            </h1>
+            <h2 className="text-accent text-2xl lg:text-3xl xl:text-4xl">
+              Find ur <span className="magic-text">Magic</span>.
+            </h2>
+            <div className="flex gap-4 lg:gap-6 mt-6">
+              <button className="cursor-pointer tracking-wide text-lg lg:text-xl font-bold btn-padding bg-primary text-dark-slate rounded-full transition-all border-2 border-primary/50 btn-hover-effect">
+                Listen Now
+              </button>
+              <button className="cursor-pointer tracking-wide text-lg lg:text-xl font-bold btn-padding border-2 border-primary/50 rounded-full hover:bg-primary/80 hover:text-black hover:bg-opacity-20 transition-all btn-hover-effect">
+                Latest Release
+              </button>
+            </div>
+          </div>
+
+          {/* Right side - empty space for image to show through */}
+          <div className="flex-1"></div>
+        </div>
+      </div>
     </div>
   );
 }

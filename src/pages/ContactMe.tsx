@@ -26,7 +26,7 @@ function ContactMe() {
         className=" bg-gradient-to-br from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-8 backdrop-blur-sm p-[3rem_!important] rounded-2xl shadow-lg"
         onSubmit={handleSubmit}
       >
-        <h1 className="text-display text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r text-nowrap from-neon-green/90 to-neon-green/70 bg-clip-text text-transparent">
+        <h1 className="text-display text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r text-nowrap from-primary/90 to-primary/70 bg-clip-text text-transparent">
           Get in Touch
         </h1>
         <FormRow
@@ -56,7 +56,7 @@ function ContactMe() {
           isTextArea
         />
         <button
-          className="w-full text-lg font-bold tracking-wide btn-padding bg-neon-green text-dark-slate rounded-full transition-all border-2 border-neon-green/50 btn-hover-effect mt-4"
+          className="w-full text-lg font-bold tracking-wide btn-padding bg-primary text-dark-slate rounded-full transition-all border-2 border-primary/50 btn-hover-effect mt-4"
           type="submit"
         >
           Send Message

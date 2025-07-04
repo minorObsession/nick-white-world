@@ -10,7 +10,7 @@ type IconProps = {
 function Icon({
   icon: IconComponent,
   onClick,
-  color = "text-neon-green",
+  color = "text-primary",
   shadowColor = "rgba(57,255,20,0.6)",
 }: IconProps) {
   const shadowStyle = {
