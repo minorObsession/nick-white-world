@@ -4,6 +4,9 @@ import { SiTiktok } from "react-icons/si";
 import { SiApplemusic } from "react-icons/si";
 import Icon from "./Icon";
 
+// add twitter + social icons
+// maybe rethink styles / position
+
 function SocialIcons() {
   return (
     <article id="social" className="flex gap-6 items-center">

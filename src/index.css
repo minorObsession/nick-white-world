@@ -31,6 +31,7 @@
     @apply bg-gradient-to-br from-deep-navy to-dark-slate backdrop-blur-sm;
   }
 
+  /* todo: better colors for this transition */
   .magic-text {
     background: linear-gradient(
       45deg,
@@ -107,7 +108,6 @@ html {
   scroll-behavior: smooth;
   color: var(--color-primary);
   font-family: var(--font-body);
-
   height: 100%;
 }
 
@@ -136,6 +136,7 @@ body {
   display: inline-flex;
 }
 
+/* todo: responsiveness of the form */
 form input,
 textarea {
   @apply text-white border-2 border-white rounded-lg;
@@ -161,6 +162,7 @@ form input:active {
   border-color: var(--color-primary);
 }
 
+/* pick some colors to use as alt colors  */
 @theme {
   /* --color-primary: rgb(0, 255, 255); */
   /* --color-primary: #a020f0; */

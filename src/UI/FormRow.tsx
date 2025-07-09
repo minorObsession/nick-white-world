@@ -23,6 +23,7 @@ function FormRow({
   placeholder,
   isTextArea = false,
 }: FormRowProps) {
+  // todo: focused border color to be 20% brighter than primary color
   const inputClasses =
     "self-center px-4 py-3 border-2 border-primary/30 rounded-lg text-white focus:border-primary focus:outline-none transition-all duration-300";
   const textareaClasses = `${inputClasses} min-h-[150px] resize-y`;

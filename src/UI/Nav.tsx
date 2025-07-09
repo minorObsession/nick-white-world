@@ -6,6 +6,12 @@ function NavSeparator() {
   );
 }
 
+// todo
+// better overall styling (too simple and dull):
+// to look better on mobile
+// more spread out
+// better nav bg color
+
 function Nav() {
   return (
     <nav
@@ -19,13 +25,13 @@ function Nav() {
         <span className="transition duration-200 hover:scale-105">Home</span>
       </NavLink>
       <NavSeparator />
-      <NavLink
+      {/* <NavLink
         to="about"
         className={({ isActive }) => `nav-button ${isActive ? "active" : ""}`}
       >
         <span className="transition duration-200 hover:scale-105">About</span>
       </NavLink>
-      <NavSeparator />
+      <NavSeparator /> */}
       <NavLink
         to="contact-me"
         className={({ isActive }) => `nav-button ${isActive ? "active" : ""}`}

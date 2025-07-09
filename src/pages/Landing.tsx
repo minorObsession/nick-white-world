@@ -2,8 +2,6 @@ import { Outlet } from "react-router";
 import Nav from "../UI/Nav";
 import SocialIcons from "../UI/SocialIcons";
 
-// LOOK INTO PAGE RESPONSIVENESS ALL AROUND
-
 function Landing() {
   return (
     <section

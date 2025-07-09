@@ -1,6 +1,8 @@
 import { useState } from "react";
 import FormRow from "../UI/FormRow";
 
+// todo:
+// make responsive
 function ContactMe() {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,10 +20,12 @@ function ContactMe() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+
+    // find a way to send email
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-3">
+    <section className="flex flex-col items-center justify-center gap-3">
       <form
         className=" bg-gradient-to-br from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-8 backdrop-blur-sm p-[3rem_!important] rounded-2xl shadow-lg"
         onSubmit={handleSubmit}
@@ -62,7 +66,7 @@ function ContactMe() {
           Send Message
         </button>
       </form>
-    </div>
+    </section>
   );
 }
 
