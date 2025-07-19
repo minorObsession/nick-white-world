@@ -6,7 +6,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    host: "0.0.0.0", // Allow connections from any IP
+    host: "localhost", // Allow connections from any IP
+    hmr: {
+      overlay: false, // Disable error overlay that can cause crashes
+    },
     port: 5173, // Default Vite port
     strictPort: true, // Fail if port is already in use
     open: false, // Don't auto-open browser

@@ -6,11 +6,11 @@ function Landing() {
   return (
     <section
       id="landing"
-      className="flex flex-col items-center gap-4 md:gap-10 h-svh"
+      className="flex flex-col items-center gap-4 md:gap-10 "
     >
       <SocialIcons />
       <Nav />
-      <main className="flex w-full h-full ">
+      <main className=" grow ">
         <Outlet />
       </main>
     </section>
