@@ -7,20 +7,20 @@ import coverImage from "../images/nick_cover.jpeg";
 
 function Homepage() {
   return (
-    <section className="relative w-full grow  overflow-hidden">
-      {/* // ! Mobile Layout - Balanced Split */}
-      <div className=" grid grid-cols-1 grid-rows-2 items-baseline-last sm:hidden">
-        {/* // ! Mobile Image Container - 50% Height */}
-        <div className=" relative">
+    <section className="relative w-full h-[calc(100svh-10.5rem)] lg:h-[calc(100svh-14rem)] overflow-hidden">
+      {/* // ! Mobile Layout - NO SCROLL FULL HEIGHT */}
+      <div className="grid grid-cols-1 grid-rows-2 sm:hidden h-full">
+        {/* // ! Mobile Image Container - Zoomed In */}
+        <div className="relative">
           <img
-            className="object-cover w-full h-full rounded-lg "
+            className="object-cover w-full h-full rounded-lg"
             src={coverImage}
             alt="Nick White Cover Photo"
           />
         </div>
 
-        {/* // ! Mobile Content Box - 50% Height */}
-        <div className=" bg-gradient-to-b from-black/60 to-black/40 p-4 flex flex-col justify-center items-center gap-3">
+        {/* // ! Mobile Content Box */}
+        <div className="bg-gradient-to-b from-black/60 to-black/40 p-4 ">
           <h1 className="text-display text-3xl font-bold text-center bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent">
             NICK WHITE
           </h1>
@@ -39,11 +39,11 @@ function Homepage() {
       </div>
 
       {/* // ! Desktop Layout - Overlay */}
-      <div className="hidden sm:block">
+      <div className="hidden sm:block min-w-screen ">
         {/* // ! Background Image Container */}
         <div className="absolute inset-0 z-0">
           <img
-            className="object-cover w-full h-full rounded-lg object-[5vw_-5vw] lg:object-[15vw_-10vw]"
+            className="object-cover w-full h-full rounded-lg object-[0%_center]"
             src={coverImage}
             alt="Nick White Cover Photo"
           />
@@ -52,10 +52,10 @@ function Homepage() {
         </div>
 
         {/* // ! Content Overlay */}
-        <div className="relative z-10 flex flex-col justify-center items-center px-4 sm:px-8 lg:px-12 h-svh overflow-hidden">
-          <div className="w-full h-full relative flex">
+        <div className="relative z-10 flex flex-col justify-center px-4 sm:px-8 lg:px-12 h-svh overflow-hidden">
+          <div className=" relative flex">
             {/* // ! Left side content */}
-            <div className="flex-1 flex flex-col justify-center items-start gap-6 lg:gap-10">
+            <div className="flex-1 flex flex-col justify-center items-start gap-4 lg:gap-6">
               <h1 className="text-display text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-lg leading-tight">
                 NICK WHITE
               </h1>
