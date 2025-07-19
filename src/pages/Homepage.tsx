@@ -55,15 +55,17 @@ function Homepage() {
 
         {/* // ! Content Overlay */}
         <div className=" z-10 flex flex-col justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 h-svh overflow-hidden">
-          <div className=" relative flex">
+          <div className="  flex">
             {/* // ! Left side content */}
             <div className="flex-1 flex flex-col justify-center items-start gap-4 lg:gap-6">
-              <h1 className="text-display text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-lg leading-tight">
-                NICK WHITE
-              </h1>
-              <h2 className="text-accent translate-x-2 text-3xl -translate-y-8 lg:text-3xl xl:text-4xl">
-                Find ur <span className="magic-text">Magic</span>
-              </h2>
+              <div className="flex flex-col gap-8">
+                <h1 className="text-display text-6xl lg:text-8xl  font-bold tracking-tight bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-lg leading-tight">
+                  NICK WHITE
+                </h1>
+                <h2 className="text-accent translate-x-2 text-3xl lg:text-4xl -translate-y-8  xl:text-4xl">
+                  Find ur <span className="magic-text">Magic</span>
+                </h2>
+              </div>
               {/* // ! Buttons */}
               <div className="flex gap-8 z-100 ">
                 <button className="cursor-pointer tracking-wider text-2xl font-bold  bg-primary btn-padding text-dark-slate rounded-full transition-all border-2 border-primary/50 btn-hover-effect">
