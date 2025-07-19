@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     host: "localhost", // Allow connections from any IP
+    port: 5173,
+    strictPort: true,
+    open: false,
     hmr: {
-      overlay: false, // Disable error overlay that can cause crashes
+      overlay: false,
     },
-    port: 5173, // Default Vite port
-    strictPort: true, // Fail if port is already in use
-    open: false, // Don't auto-open browser
   },
 });
