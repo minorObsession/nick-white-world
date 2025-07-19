@@ -22,7 +22,7 @@ function Homepage() {
       {/* // ! Content Overlay */}
       <div className="relative z-10 flex flex-col justify-center items-center px-4 sm:px-8 lg:px-12 h-svh overflow-hidden">
         {/* // ! // ! Mobile Layout (stacked) */}
-        <view className="items-center gap-6 sm:hidden ">
+        <view className="items-center gap-6 sm:hidden flex flex-col justify-center ">
           <h1 className="text-display text-4xl font-bold tracking-tight text-center bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent drop-shadow-lg text-nowrap ">
             NICK WHITE
           </h1>
