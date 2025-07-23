@@ -10,7 +10,7 @@ function Landing() {
     >
       <SocialIcons />
       <Nav />
-      <main className="  ">
+      <main className=" ">
         <Outlet />
       </main>
     </section>

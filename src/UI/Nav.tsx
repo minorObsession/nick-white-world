@@ -14,9 +14,10 @@ function NavSeparator() {
 
 function Nav() {
   return (
+    // ! WORKING ON NAVIGATION RESPONSIVENESS
     <nav
       id="navigation"
-      className="flex h-[4rem] lg:h-[6rem] items-center gap-1 sm:gap-3 lg:gap-4 justify-center w-full text-display bg-gradient py-[0.5rem_!important] px-[1rem_!important] rounded-xl shadow-lg"
+      className=" w-[80vw] md:w-[70vw] lg:w-[60vw] mx-auto flex h-[4rem] lg:h-[6rem] items-center gap-2 sm:gap-3 lg:gap-4 justify-center text-display bg-gradient rounded-xl shadow-lg"
     >
       <NavLink
         to="/"

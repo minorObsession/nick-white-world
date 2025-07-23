@@ -25,12 +25,12 @@ function ContactMe() {
   };
 
   return (
-    <section className="">
+    <section className="w-[80vw] md:w-[70vw] lg:w-[60vw] mx-auto flex flex-col items-center justify-center">
       <form
-        className=" bg-gradient-to-br from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-3 lg:gap-5 backdrop-blur-sm p-[2rem_!important] md:p-[2.5rem_!important] rounded-2xl shadow-lg"
+        className="w-full bg-gradient-to-br from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-3 md:gap-5 lg:gap-8 backdrop-blur-sm p-[1.5rem_!important] md:p-[2.5rem_!important] lg:p-[3rem_!important] rounded-2xl shadow-lg"
         onSubmit={handleSubmit}
       >
-        <h1 className="text-display text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r text-nowrap from-primary/90 to-primary/70 bg-clip-text text-transparent">
+        <h1 className="text-display text-3xl md:text-5xl lg:text-6xl font-bold  bg-gradient-to-r text-nowrap from-primary/90 to-primary/70 bg-clip-text text-transparent">
           Get in Touch
         </h1>
         <FormRow
@@ -60,7 +60,7 @@ function ContactMe() {
           isTextArea
         />
         <button
-          className="w-full text-lg font-bold tracking-wide btn-padding bg-primary text-dark-slate rounded-full transition-all border-2 border-primary/50 btn-hover-effect "
+          className="w-[clamp(15rem,30vw,40rem)] text-base md:text-lg font-extrabold tracking-wide btn-padding bg-primary text-dark-slate rounded-full transition-all border-2 border-primary/50 btn-hover-effect"
           type="submit"
         >
           Send Message

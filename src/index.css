@@ -148,16 +148,19 @@ body {
 form input,
 textarea {
   @apply text-white border-2 border-white rounded-lg;
-  /* width: 10rem; */
-  width: clamp(15rem, 30vw, 40rem);
+
   field-sizing: content;
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 0.5em 0.7em;
   border-color: var(--color-primary);
 }
 
-form textarea {
-  /* min-height: 8em; */
+@media (min-width: 1024px) {
+  form input,
+  textarea {
+    padding: 1em 1.2em;
+    font-size: 1.3rem;
+  }
 }
 
 form button:focus,
@@ -180,9 +183,9 @@ form input:active {
   /* --color-primary: #dc143c; */
 
   /* Primary Colors */
-  /* --color-primary: rgb(57, 255, 20); */
+  --color-green: rgb(57, 255, 20);
   --color-deep-purple: rgb(147, 20, 255);
-  --color-hot-pink: rgb(255, 20, 147);
+  /* --color-hot-pink: rgb(255, 20, 147); */
   --color-electric-blue: rgb(20, 147, 255);
 
   /* Secondary Colors */
