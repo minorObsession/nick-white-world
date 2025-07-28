@@ -17,7 +17,7 @@ function Nav() {
     // ! WORKING ON NAVIGATION RESPONSIVENESS
     <nav
       id="navigation"
-      className=" w-[80vw] md:w-[70vw] lg:w-[60vw] mx-auto flex h-[4rem] lg:h-[6rem] items-center gap-2 sm:gap-3 lg:gap-4 justify-center text-display bg-gradient rounded-xl shadow-lg"
+      className="border border-primary/30 w-[80vw] md:w-[70vw] lg:w-[60vw] mx-auto flex h-[3rem] md:h-[4rem] lg:h-[5rem] items-center gap-2 sm:gap-3 lg:gap-4 justify-center text-display bg-gradient rounded-xl shadow-lg"
     >
       <NavLink
         to="/"
@@ -37,9 +37,7 @@ function Nav() {
         to="contact-me"
         className={({ isActive }) => `nav-button ${isActive ? "active" : ""}`}
       >
-        <span className="transition duration-200 hover:scale-105">
-          Contact Me
-        </span>
+        <span className="transition duration-200 hover:scale-105">Contact</span>
       </NavLink>
       <NavSeparator />
       <NavLink

@@ -25,9 +25,24 @@ function ContactMe() {
   };
 
   return (
-    <section className="w-[80vw] md:w-[70vw] lg:w-[60vw] mx-auto flex flex-col items-center justify-center">
+    <section className="w-[80vw] md:w-[70vw] lg:w-[60vw] h-[calc(100svh-10.5rem)] lg:h-[calc(100svh-14rem)] mx-auto flex flex-col items-center  gap-8  overflow-y-scroll">
+      {/* // ! Fan Text Updates Signup */}
+      {/* <article className="w-full bg-gradient-to-br from-primary/20 to-primary/10 flex flex-col items-center justify-center gap-4 backdrop-blur-sm p-6 bg-gradient rounded-2xl  border border-primary/30">
+        <h2 className="text-display text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent">
+          Get Exclusive Updates
+        </h2>
+        <p className="text-center text-lg">
+          Text <span className="font-bold text-primary">RSVP</span> to{" "}
+          <span className="font-bold text-primary">(your-laylo-number)</span>
+        </p>
+        <p className="text-sm text-center opacity-80">
+          Be the first to know about new releases, tour dates, and exclusive
+          drops!
+        </p>
+      </article> */}
+
       <form
-        className="w-full bg-gradient-to-br from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-3 md:gap-5 lg:gap-8 backdrop-blur-sm p-[1.5rem_!important] md:p-[2.5rem_!important] lg:p-[3rem_!important] rounded-2xl shadow-lg"
+        className="border border-primary/30 w-full bg-gradient  from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-3 md:gap-5 lg:gap-8 backdrop-blur-sm p-[1rem_!important] md:p-[2rem_!important] rounded-2xl  "
         onSubmit={handleSubmit}
       >
         <h1 className="text-display text-3xl md:text-5xl lg:text-6xl font-bold  bg-gradient-to-r text-nowrap from-primary/90 to-primary/70 bg-clip-text text-transparent">

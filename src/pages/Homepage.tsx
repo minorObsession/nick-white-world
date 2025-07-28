@@ -34,7 +34,7 @@ function Homepage() {
               Listen Now
             </button>
             <button className="cursor-pointer tracking-wide text-base font-bold btn-padding border-2 border-primary/50 rounded-full hover:bg-primary/80 hover:text-black transition-all btn-hover-effect">
-              Latest Release
+              Text for Updates
             </button>
           </div>
         </div>
@@ -50,11 +50,11 @@ function Homepage() {
             alt="Nick White Cover Photo"
           />
           {/* // ! Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/15 lg:bg-black/5"></div>
+          <div className=" absolute inset-0 bg-black/15 lg:bg-black/5"></div>
         </div>
 
         {/* // ! Content Overlay */}
-        <div className=" z-10 flex flex-col justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 h-svh overflow-hidden">
+        <div className=" z-10 flex flex-col justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 h-svh">
           <div className="  flex">
             {/* // ! Left side content */}
             <div className="flex-1 flex flex-col justify-center items-start gap-4 lg:gap-6">
@@ -67,12 +67,12 @@ function Homepage() {
                 </h2>
               </div>
               {/* // ! Buttons */}
-              <div className="flex gap-8 z-100 ">
+              <div className="flex gap-8 z-[100] ">
                 <button className="cursor-pointer tracking-wider text-2xl font-bold  bg-primary btn-padding text-dark-slate rounded-full transition-all border-2 border-primary/50 btn-hover-effect">
                   Listen Now
                 </button>
                 <button className="cursor-pointer tracking-wider text-2xl font-bold  border-2 btn-padding border-primary/50 rounded-full hover:bg-primary/80 hover:text-black hover:bg-opacity-20 transition-all btn-hover-effect">
-                  Latest Release
+                  Text for Updates
                 </button>
               </div>
             </div>

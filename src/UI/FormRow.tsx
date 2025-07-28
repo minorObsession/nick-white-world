@@ -29,7 +29,7 @@ function FormRow({
   const textareaClasses = `${inputClasses} min-h-[120px] resize-y`;
 
   return (
-    <div className=" text-primary flex flex-col gap-2 lg:gap-5">
+    <div className=" text-primary flex flex-col gap-2 lg:gap-4">
       <label
         htmlFor={id}
         className="text-accent text-lg md:text-xl lg:text-2xl font-medium"
