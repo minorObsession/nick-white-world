@@ -106,9 +106,6 @@
   --font-display: "Syne", sans-serif; /* Bold, artistic headings */
   --font-body: "Space Grotesk", sans-serif; /* Clean, modern body text */
   --font-accent: "Outfit", sans-serif; /* Versatile accent font */
-  /* max-height: 100svh;
-  min-height: 100svh; */
-  /* overflow: auto; */
 }
 
 html {
@@ -116,15 +113,14 @@ html {
   scroll-behavior: smooth;
   color: var(--color-primary);
   font-family: var(--font-body);
-  /* height: 100% */
 }
 
 body {
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: rgba(1, 0, 16, 1);
   overflow-x: hidden;
+  /* overflow-y: auto; */
   color: aliceblue;
-  /* min-height: 100svh; */
 }
 
 #navigation {

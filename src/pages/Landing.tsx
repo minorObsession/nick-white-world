@@ -6,11 +6,12 @@ function Landing() {
   return (
     <section
       id="landing"
-      className="flex flex-col items-center gap-4 md:gap-10 "
+      // ! don't set height here, it will make things shift
+      className="flex flex-col items-center gap-3 md:gap-5"
     >
       <SocialIcons />
       <Nav />
-      <main className=" ">
+      <main className="">
         <Outlet />
       </main>
     </section>
