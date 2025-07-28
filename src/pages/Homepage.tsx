@@ -54,14 +54,19 @@ function Homepage() {
         </div>
 
         {/* // ! Content Overlay */}
-        <div className=" z-10 flex flex-col justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 ">
-          <iframe
-            id="laylo-drop-i7TJ5"
-            allow="web-share"
-            allowtransparency="true"
-            src="https://embed.laylo.com?dropId=i7TJ5&color=FF4D00&minimal=true&theme=dark"
-          ></iframe>
+        <div className="z-10 flex flex-col justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 ">
+          <div className="flex flex-col gap-4">
+            <h2 className="text-accent text-2xl text-primary ">
+              Sign up for updates
+            </h2>
 
+            <iframe
+              id="laylo-drop-i7TJ5"
+              allow="web-share"
+              allowTransparency={true}
+              src="https://embed.laylo.com?dropId=i7TJ5&color=5454c6&theme=dark&background=transparent"
+            ></iframe>
+          </div>
           <div className="  flex">
             {/* // ! Left side content */}
             <div className="flex-1 flex flex-col justify-center items-start gap-4 lg:gap-6">
@@ -89,5 +94,4 @@ function Homepage() {
     </section>
   );
 }
-
 export default Homepage;

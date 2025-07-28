@@ -171,16 +171,26 @@ form input:active {
 #laylo-drop-i7TJ5 {
   /* Make it visible first */
   max-width: 50%;
-  max-height: 200px;
 
   /* Remove absolute positioning to see if it appears */
-  position: relative;
-  display: block;
+  /* position: relative; */
+  /* display: block; */
 
   /* Visual styling */
   /* border: 2px solid var(--color-primary); */
   border-radius: 8px;
-  /* background: rgba(255, 255, 255, 0.1); */
+  /* Compensate for internal padding */
+  margin-left: -25px !important; /* to neutralize the padding */
+  padding: 0 !important;
+
+  background: transparent !important;
+  mix-blend-mode: multiply; /* Blends with background */
+}
+
+@media screen and (min-width: 1024px) {
+  #laylo-drop-i7TJ5 {
+    max-width: 30%;
+  }
 }
 
 /* pick some colors to use as alt colors  */
@@ -188,6 +198,7 @@ form input:active {
   /* --color-primary: rgb(0, 255, 255); */
   /* --color-primary: #a020f0; */
   /* --color-primary: #f5f5dc; */
+  /* --color-primary: #5454c6; hsla(240, 53%, 58%, 1) */
   --color-primary: hsla(240, 53%, 58%, 1);
   /* --color-primary: rgba(106, 90, 205, 1); */
   /* --color-primary: #dc143c; */
