@@ -168,6 +168,21 @@ form input:active {
   border-color: var(--color-primary);
 }
 
+#laylo-drop-i7TJ5 {
+  /* Make it visible first */
+  max-width: 50%;
+  max-height: 200px;
+
+  /* Remove absolute positioning to see if it appears */
+  position: relative;
+  display: block;
+
+  /* Visual styling */
+  /* border: 2px solid var(--color-primary); */
+  border-radius: 8px;
+  /* background: rgba(255, 255, 255, 0.1); */
+}
+
 /* pick some colors to use as alt colors  */
 @theme {
   /* --color-primary: rgb(0, 255, 255); */

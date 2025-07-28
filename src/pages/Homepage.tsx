@@ -7,9 +7,9 @@ import coverImage from "../images/nick_cover.jpeg";
 
 function Homepage() {
   return (
-    <section className="relative w-full h-[calc(100svh-10.5rem)] lg:h-[calc(100svh-14rem)] overflow-hidden">
+    <section className="relative w-full h-[calc(100svh-10.5rem)] lg:h-[calc(100svh-14rem)]">
       {/* // ! Mobile Layout - NO SCROLL FULL HEIGHT */}
-      <view className="grid grid-cols-1 grid-rows-2 sm:hidden h-full">
+      <div className="grid grid-cols-1 grid-rows-2 sm:hidden h-full">
         {/* // ! Mobile Image Container - Zoomed In */}
         <div className="relative">
           <img
@@ -38,10 +38,10 @@ function Homepage() {
             </button>
           </div>
         </div>
-      </view>
+      </div>
 
       {/* // ! Desktop Layout - Overlay */}
-      <view className="hidden sm:block min-w-screen ">
+      <div className="hidden sm:block min-w-screen ">
         {/* // ! Background Image Container */}
         <div className="absolute inset-0 z-0">
           <img
@@ -54,7 +54,14 @@ function Homepage() {
         </div>
 
         {/* // ! Content Overlay */}
-        <div className=" z-10 flex flex-col justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 h-svh">
+        <div className=" z-10 flex flex-col justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 ">
+          <iframe
+            id="laylo-drop-i7TJ5"
+            allow="web-share"
+            allowtransparency="true"
+            src="https://embed.laylo.com?dropId=i7TJ5&color=FF4D00&minimal=true&theme=dark"
+          ></iframe>
+
           <div className="  flex">
             {/* // ! Left side content */}
             <div className="flex-1 flex flex-col justify-center items-start gap-4 lg:gap-6">
@@ -78,7 +85,7 @@ function Homepage() {
             </div>
           </div>
         </div>
-      </view>
+      </div>
     </section>
   );
 }
