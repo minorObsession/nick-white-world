@@ -1,0 +1,108 @@
+/* Custom styles for react-phone-input-2 to match dark theme */
+
+.phone-input-container {
+  width: 100%;
+}
+
+.phone-input-wrapper {
+  width: 100% !important;
+}
+
+.phone-input-wrapper .form-control {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(84, 84, 198, 0.3) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  height: 48px !important;
+  font-size: 16px !important;
+}
+
+.phone-input-wrapper .form-control:focus {
+  border-color: rgb(84, 84, 198) !important;
+  box-shadow: 0 0 0 1px rgb(84, 84, 198) !important;
+  outline: none !important;
+}
+
+.phone-input-wrapper .form-control::placeholder {
+  color: rgba(156, 163, 175, 1) !important;
+}
+
+.phone-input-wrapper .flag-dropdown {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(84, 84, 198, 0.3) !important;
+  border-radius: 8px 0 0 8px !important;
+}
+
+.phone-input-wrapper .flag-dropdown:hover {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.phone-input-wrapper .selected-flag {
+  background-color: transparent !important;
+  padding: 0 8px !important;
+}
+
+.phone-input-wrapper .selected-flag:hover {
+  background-color: rgba(84, 84, 198, 0.1) !important;
+}
+
+.phone-input-wrapper .country-list {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  border: 1px solid rgba(84, 84, 198, 0.3) !important;
+  border-radius: 8px !important;
+  max-height: 200px !important;
+  overflow-y: auto !important;
+}
+
+.phone-input-wrapper .country-list .search {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: white !important;
+  border: 1px solid rgba(84, 84, 198, 0.3) !important;
+  border-radius: 4px !important;
+  margin: 8px !important;
+  padding: 8px !important;
+}
+
+.phone-input-wrapper .country-list .search::placeholder {
+  color: rgba(156, 163, 175, 1) !important;
+}
+
+.phone-input-wrapper .country-list .country {
+  color: white !important;
+  padding: 8px 12px !important;
+}
+
+.phone-input-wrapper .country-list .country:hover {
+  background-color: rgba(84, 84, 198, 0.2) !important;
+}
+
+.phone-input-wrapper .country-list .country.highlight {
+  background-color: rgba(84, 84, 198, 0.3) !important;
+}
+
+.phone-input-wrapper .country-list .country .country-name {
+  color: white !important;
+}
+
+.phone-input-wrapper .country-list .country .dial-code {
+  color: rgba(156, 163, 175, 1) !important;
+}
+
+/* Custom scrollbar for country dropdown */
+.phone-input-wrapper .country-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.phone-input-wrapper .country-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.phone-input-wrapper .country-list::-webkit-scrollbar-thumb {
+  background: rgba(84, 84, 198, 0.5);
+  border-radius: 3px;
+}
+
+.phone-input-wrapper .country-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(84, 84, 198, 0.7);
+}

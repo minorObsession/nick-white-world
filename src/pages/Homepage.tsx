@@ -1,9 +1,13 @@
 import coverImage from "../images/nick_cover.jpeg";
+import LayloWidget from "../UI/LayloWidget";
 
-// todo
-// add widget to put phone number for subscription (this feature to notify thru email and look into good text services)
+// TODO: Setup Instructions
+// 1. Create a .env file in the project root
+// 2. Add: VITE_LAYLO_API_KEY=your-actual-api-key-here
+// 3. Get your API key from: Settings → Integrations → API Keyring in your Laylo dashboard
 //
-// double check view html element (never used before)
+// Security Note: In production, API keys should be server-side, not in frontend code
+// Consider implementing a backend proxy endpoint for enhanced security
 
 function Homepage() {
   return (
@@ -54,18 +58,18 @@ function Homepage() {
         </div>
 
         {/* // ! Content Overlay */}
-        <div className="z-10 flex flex-col justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 ">
+        <div className="z-10 flex flex-col gap-10 justify-center translate-10 lg:translate-16 px-4 sm:px-8 lg:px-12 ">
+          {/* // ! Custom Laylo Widget */}
           <div className="flex flex-col gap-4">
             <h2 className="text-accent text-2xl text-primary ">
               Sign up for updates
             </h2>
 
-            <iframe
-              id="laylo-drop-i7TJ5"
-              allow="web-share"
-              allowTransparency={true}
-              src="https://embed.laylo.com?dropId=i7TJ5&color=5454c6&theme=dark&background=transparent"
-            ></iframe>
+            <LayloWidget
+              apiKey={
+                import.meta.env.VITE_LAYLO_API_KEY || "YOUR_LAYLO_API_KEY_HERE"
+              }
+            />
           </div>
           <div className="  flex">
             {/* // ! Left side content */}
