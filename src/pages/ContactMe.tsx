@@ -25,7 +25,7 @@ function ContactMe() {
   };
 
   return (
-    <section className="w-[80vw] md:w-[70vw] lg:w-[60vw] h-[calc(100svh-10.5rem)] lg:h-[calc(100svh-14rem)] mx-auto flex flex-col items-center  gap-8  overflow-y-scroll">
+    <section className="mx-auto flex h-[calc(100svh-10.5rem)] w-[80vw] flex-col items-center gap-8 overflow-y-scroll md:w-[70vw] lg:h-[calc(100svh-14rem)] lg:w-[60vw]">
       {/* // ! Fan Text Updates Signup */}
       {/* <article className="w-full bg-gradient-to-br from-primary/20 to-primary/10 flex flex-col items-center justify-center gap-4 backdrop-blur-sm p-6 bg-gradient rounded-2xl  border border-primary/30">
         <h2 className="text-display text-2xl md:text-3xl font-bold text-center bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-transparent">
@@ -42,10 +42,10 @@ function ContactMe() {
       </article> */}
 
       <form
-        className="border border-primary/30 w-full bg-gradient  from-deep-navy to-dark-slate flex flex-col items-center justify-center gap-3 md:gap-5 lg:gap-8 backdrop-blur-sm p-[1rem_!important] md:p-[2rem_!important] rounded-2xl  "
+        className="border-primary/30 bg-gradient from-deep-navy to-dark-slate flex w-full flex-col items-center justify-center gap-3 rounded-2xl border p-[1rem_!important] backdrop-blur-sm md:gap-5 md:p-[2rem_!important] lg:gap-8"
         onSubmit={handleSubmit}
       >
-        <h1 className="text-display text-3xl md:text-5xl lg:text-6xl font-bold  bg-gradient-to-r text-nowrap from-primary/90 to-primary/70 bg-clip-text text-transparent">
+        <h1 className="text-display from-primary/90 to-primary/70 bg-gradient-to-r bg-clip-text text-3xl font-bold text-nowrap text-transparent md:text-4xl lg:text-5xl">
           Get in Touch
         </h1>
         <FormRow
@@ -75,7 +75,7 @@ function ContactMe() {
           isTextArea
         />
         <button
-          className="w-[clamp(15rem,30vw,40rem)] text-base md:text-lg font-extrabold tracking-wide btn-padding bg-primary text-dark-slate rounded-full transition-all border-2 border-primary/50 btn-hover-effect"
+          className="btn-padding bg-primary text-dark-slate border-primary/50 btn-hover-effect w-[clamp(15rem,30vw,40rem)] rounded-full border-2 text-base font-extrabold tracking-wide transition-all md:text-lg"
           type="submit"
         >
           Send Message

@@ -7,6 +7,7 @@ import "./LayloWidget.css";
 interface LayloWidgetProps {
   apiKey: string;
   className?: string;
+  isVisible: boolean;
 }
 
 interface SubscriptionResponse {
@@ -18,7 +19,7 @@ interface SubscriptionResponse {
   }>;
 }
 
-function LayloWidget({ apiKey, className = "" }: LayloWidgetProps) {
+function LayloWidget({ apiKey, className = "", isVisible }: LayloWidgetProps) {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -145,7 +146,11 @@ function LayloWidget({ apiKey, className = "" }: LayloWidgetProps) {
 
   return (
     <div
-      className={`border-primary/20 h-[15rem] max-w-[50%] rounded-lg bg-transparent p-6 backdrop-blur-sm lg:max-w-[30%] ${className}`}
+      className={`border-primary/20 h-[15rem] max-w-[33%] transform rounded-lg bg-transparent p-6 backdrop-blur-sm transition-all duration-300 ${
+        isVisible
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none -translate-y-4 opacity-0"
+      } ${className}`}
     >
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         {/* // ! Subscription Type Toggle */}
@@ -153,39 +158,50 @@ function LayloWidget({ apiKey, className = "" }: LayloWidgetProps) {
           <button
             type="button"
             onClick={() => setSubscriptionType("phone")}
-            className={`flex h-10 w-10 items-center justify-center rounded-full p-3 transition-all ${
+            className={`flex h-10 w-11 cursor-pointer items-center justify-center rounded-full p-3 transition-all ${
               subscriptionType === "phone"
                 ? "bg-primary text-dark-slate"
                 : "text-primary border-primary/50 hover:bg-primary/10 border bg-transparent"
             }`}
             title="Text Updates"
           >
-            <MdSms size={20} />
+            <MdSms size={24} />
           </button>
           <button
             type="button"
             onClick={() => setSubscriptionType("email")}
-            className={`flex h-10 w-10 items-center justify-center rounded-full p-3 transition-all ${
+            className={`flex h-10 w-11 cursor-pointer items-center justify-center rounded-full p-3 transition-all ${
               subscriptionType === "email"
                 ? "bg-primary text-dark-slate"
                 : "text-primary border-primary/50 hover:bg-primary/10 border bg-transparent"
             }`}
             title="Email Updates"
           >
-            <MdEmail size={20} />
+            <MdEmail size={24} />
           </button>
         </div>
 
         {/* // ! Input Field */}
         {subscriptionType === "email" ? (
           <input
+            id="input-email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             required
-            className="border-primary/30 focus:border-primary focus:ring-primary h-12 w-full rounded-lg border bg-black/50 px-4 text-white placeholder-gray-400 focus:ring-1 focus:outline-none"
-            style={{ height: "48px" }}
+            className="h-12 w-full rounded-lg bg-black/50 px-4 text-white placeholder-gray-400 focus:outline-none"
+            style={{
+              height: "48px",
+              border: "1px solid rgba(84, 84, 198, 0.3)",
+              borderWidth: "1px",
+              boxSizing: "border-box",
+            }}
+            onFocus={(e) => {
+              e.target.style.border = "1px solid rgba(84, 84, 198, 0.3)";
+              e.target.style.borderWidth = "1px";
+              e.target.style.boxShadow = "none";
+            }}
           />
         ) : (
           <div className="phone-input-container">
@@ -194,38 +210,11 @@ function LayloWidget({ apiKey, className = "" }: LayloWidgetProps) {
               value={phoneNumber}
               onChange={(phone) => setPhoneNumber(phone)}
               placeholder="Enter your phone number"
-              inputStyle={{
-                width: "100%",
-                height: "48px",
-                fontSize: "16px",
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                border: "1px solid rgba(84, 118, 198, 0.3)",
-                borderRadius: "8px",
-                color: "white",
-                paddingLeft: "60px",
-              }}
-              buttonStyle={{
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                border: "1px solid rgba(84, 84, 198, 0.3)",
-                borderRadius: "8px 0 0 8px",
-              }}
-              dropdownStyle={{
-                backgroundColor: "rgba(0, 0, 0, 0.9)",
-                border: "1px solid rgba(84, 84, 198, 0.3)",
-                borderRadius: "8px",
-                color: "white",
-              }}
-              searchStyle={{
-                backgroundColor: "rgba(0, 0, 0, 0.7)",
-                color: "white",
-                border: "1px solid rgba(84, 84, 198, 0.3)",
-              }}
+              isValid={() => true}
+              disableCountryCode={false}
+              disableDropdown={false}
               enableSearch
               searchPlaceholder="Search countries..."
-              containerClass="phone-input-wrapper"
-              inputClass="phone-input-field"
-              buttonClass="phone-input-button"
-              dropdownClass="phone-input-dropdown"
             />
           </div>
         )}
@@ -234,7 +223,7 @@ function LayloWidget({ apiKey, className = "" }: LayloWidgetProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className="bg-primary text-dark-slate hover:bg-primary/90 h-10 w-full rounded-lg px-6 py-3 font-bold transition-all disabled:cursor-not-allowed disabled:opacity-50"
+          className="bg-primary text-dark-slate border-primary/50 btn-hover-effect btn-small-padding cursor-pointer rounded-full border-2 text-lg font-bold transition-all lg:text-xl"
         >
           {isLoading
             ? "Subscribing..."
