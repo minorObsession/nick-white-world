@@ -184,7 +184,8 @@ function LayloWidget({ apiKey, className = "" }: LayloWidgetProps) {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             required
-            className="border-primary/30 focus:border-primary focus:ring-primary w-full rounded-lg border bg-black/50 px-4 py-3 text-white placeholder-gray-400 focus:ring-1 focus:outline-none"
+            className="border-primary/30 focus:border-primary focus:ring-primary h-12 w-full rounded-lg border bg-black/50 px-4 text-white placeholder-gray-400 focus:ring-1 focus:outline-none"
+            style={{ height: "48px" }}
           />
         ) : (
           <div className="phone-input-container">
