@@ -8,6 +8,7 @@ interface LayloWidgetProps {
   apiKey: string;
   className?: string;
   isVisible: boolean;
+  mobile?: boolean;
 }
 
 interface SubscriptionResponse {
@@ -19,7 +20,12 @@ interface SubscriptionResponse {
   }>;
 }
 
-function LayloWidget({ apiKey, className = "", isVisible }: LayloWidgetProps) {
+function LayloWidget({
+  apiKey,
+  className = "",
+  isVisible,
+  mobile = false,
+}: LayloWidgetProps) {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -146,7 +152,9 @@ function LayloWidget({ apiKey, className = "", isVisible }: LayloWidgetProps) {
 
   return (
     <div
-      className={`border-primary/20 h-[15rem] max-w-[33%] transform rounded-lg bg-transparent p-6 backdrop-blur-sm transition-all duration-300 ${
+      className={`border-primary/20 h-[15rem] transform rounded-lg bg-transparent p-6 backdrop-blur-sm transition-all duration-300 ${
+        mobile ? "w-full" : "max-w-[33%]"
+      } ${
         isVisible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none -translate-y-4 opacity-0"

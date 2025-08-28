@@ -27,7 +27,10 @@ function Homepage() {
         </div>
 
         {/* // ! Mobile Content Box */}
-        <div className="flex flex-col gap-4 self-center bg-gradient-to-b from-black/60 to-black/40 p-4">
+        <div
+          // onMouseLeave={() => setTimeout(() => setIsWidgetVisible(false), 500)}
+          className="relative flex flex-col gap-4 self-center bg-gradient-to-b from-black/60 to-black/40 p-4"
+        >
           <div>
             <h1 className="text-display from-primary/90 to-primary/70 bg-gradient-to-r bg-clip-text text-center text-4xl font-bold text-transparent">
               NICK WHITE
@@ -38,11 +41,31 @@ function Homepage() {
           </div>
           <div className="flex flex-col gap-3">
             <button className="btn-padding bg-primary text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all">
-              Listen Now
+              Latest Release
             </button>
-            <button className="btn-padding border-primary/50 hover:bg-primary/80 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all hover:text-black">
-              Text for Updates
+            {/* // ! Text for updates button */}
+            <button
+              onMouseEnter={() => setIsWidgetVisible(true)}
+              onTouchStart={() => setIsWidgetVisible(true)}
+              className="btn-padding border-primary/50 hover:bg-primary/80 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all hover:text-black"
+            >
+              RSVP - stay in the loop
             </button>
+          </div>
+
+          {/* // ! Mobile Laylo Widget Section - Absolute positioned overlay */}
+          <div
+            className={`absolute top-[110%] right-0 left-0 z-50 transition-all duration-300 ${
+              isWidgetVisible
+                ? "translate-y-0 opacity-100"
+                : "pointer-events-none -translate-y-4 opacity-0"
+            }`}
+          >
+            <LayloWidget
+              isVisible={isWidgetVisible}
+              apiKey={import.meta.env.VITE_LAYLO_API_KEY}
+              mobile={true}
+            />
           </div>
         </div>
       </div>
