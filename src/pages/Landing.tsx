@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import Nav from "../UI/Nav";
+// import Nav from "../UI/Nav";
 import SocialIcons from "../UI/SocialIcons";
 
 function Landing() {
@@ -10,7 +10,7 @@ function Landing() {
       className="flex flex-col items-center gap-3 md:gap-5"
     >
       <SocialIcons />
-      <Nav />
+      {/* <Nav /> */}
       <main className="">
         <Outlet />
       </main>
