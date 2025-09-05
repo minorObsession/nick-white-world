@@ -14,22 +14,24 @@ import { FiArrowDownCircle } from "react-icons/fi";
 function Homepage() {
   const [isWidgetVisible, setIsWidgetVisible] = useState(false);
   return (
-    <section className="relative h-[calc(100svh-10.5rem)] w-full lg:h-[calc(100svh-14rem)]">
+    <section className="relative h-svh w-full">
       {/* // ! Mobile Layout - NO SCROLL FULL HEIGHT */}
-      <div className="grid h-full grid-cols-1 grid-rows-2 sm:hidden">
+      <div className="grid h-full grid-cols-1 grid-rows-2 gap-1 sm:hidden">
         {/* // ! Mobile Image Container - Zoomed In */}
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <img
-            className="h-full w-full rounded-lg object-cover"
+            className="h-full w-full scale-[1.08] object-cover"
             src={coverImage}
             alt="Nick White Cover Photo"
           />
+          {/* // ! Gradient overlay for smooth transition */}
+          <div className="absolute right-0 bottom-0 left-0 h-16 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
         </div>
 
         {/* // ! Mobile Content Box */}
         <div
           // onMouseLeave={() => setTimeout(() => setIsWidgetVisible(false), 500)}
-          className="relative flex flex-col gap-4 self-center bg-gradient-to-b from-black/60 to-black/40 p-4"
+          className="relative -mt-2 flex flex-col gap-4 rounded-t-2xl bg-gradient-to-b from-black/70 via-black/50 to-black/30 p-4 backdrop-blur-sm"
         >
           <div>
             <h1 className="text-display from-primary/90 to-primary/70 bg-gradient-to-r bg-clip-text text-center text-4xl font-bold text-transparent">
@@ -122,7 +124,7 @@ function Homepage() {
               {/* // ! Buttons */}
               <div className="z-[100] flex gap-8">
                 <button className="bg-primary btn-padding text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-xl font-bold tracking-wider transition-all lg:text-2xl">
-                  Listen Now
+                  Latest Release
                 </button>
                 <button className="btn-padding border-primary/50 hover:bg-primary/80 hover:bg-opacity-20 btn-hover-effect cursor-pointer rounded-full border-2 text-xl font-bold tracking-wider transition-all hover:text-black lg:text-2xl">
                   Text for Updates
