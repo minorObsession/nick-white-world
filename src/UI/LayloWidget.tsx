@@ -105,16 +105,23 @@ function LayloWidget({
     console.log("=== LAYLO FORM SUBMITTED ===");
     console.log("Form submission triggered!");
     console.log("API Key exists:", !!apiKey);
-    console.log("API Key preview:", apiKey ? `${apiKey.substring(0, 20)}...` : "MISSING");
+    console.log(
+      "API Key preview:",
+      apiKey ? `${apiKey.substring(0, 20)}...` : "MISSING"
+    );
     console.log("Subscription type:", subscriptionType);
     console.log("Environment:", import.meta.env.MODE);
-    console.log("Raw env var:", import.meta.env.VITE_LAYLO_API_KEY ? "PRESENT" : "MISSING");
-    
+    console.log(
+      "Raw env var:",
+      import.meta.env.VITE_LAYLO_API_KEY ? "PRESENT" : "MISSING"
+    );
+
     // Also show alert for immediate feedback
-    alert(`Form submitted! API Key: ${apiKey ? "Present" : "MISSING"}, Type: ${subscriptionType}, Env: ${import.meta.env.MODE}`);
+    alert(
+      `Form submitted! API Key: ${apiKey ? "Present" : "MISSING"}, Type: ${subscriptionType}, Env: ${import.meta.env.MODE}`
+    );
 
     try {
-
       // const variables: { email?: string; phoneNumber?: string } = {};
 
       if (subscriptionType === "email" && email) {
