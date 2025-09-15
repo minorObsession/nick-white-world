@@ -31,48 +31,48 @@ function Homepage() {
         {/* // ! Mobile Content Box */}
         <div
           // onMouseLeave={() => setTimeout(() => setIsWidgetVisible(false), 500)}
-          className="relative -mt-2 flex flex-col gap-4 rounded-t-2xl bg-gradient-to-b from-black/70 via-black/50 to-black/30 p-4 backdrop-blur-sm"
+          className="-mt-2 flex flex-col justify-start gap-4 rounded-t-2xl bg-gradient-to-b from-black/70 via-black/50 to-black/30 p-4 backdrop-blur-sm"
         >
-          <div>
+          <div className="relative flex flex-col gap-2">
             <h1 className="text-display from-primary/90 to-primary/70 bg-gradient-to-r bg-clip-text text-center text-4xl font-bold text-transparent">
               NICK WHITE
             </h1>
             <h2 className="text-accent text-center text-2xl">
               Find ur <span className="magic-text">Magic</span>
             </h2>
-          </div>
-          <div className="flex flex-col gap-3">
-            <button
-              onMouseEnter={() => setIsWidgetVisible(true)}
-              onTouchStart={() => setIsWidgetVisible(true)}
-              className="btn-padding border-primary/50 hover:bg-primary/80 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all hover:text-black"
-            >
-              RSVP - stay in the loop
-            </button>
-            <button
-              className="btn-padding bg-primary text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all"
-              onClick={() => {
-                window.open("https://td.nickwhiteworld.com/game", "_blank");
-              }}
-            >
-              Latest Release
-            </button>
-            {/* // ! Text for updates button */}
-          </div>
+            <div className="flex flex-col gap-3">
+              {/* // ! Text for updates button */}
+              <button
+                onMouseEnter={() => setIsWidgetVisible(true)}
+                onTouchStart={() => setIsWidgetVisible(true)}
+                className="btn-padding border-primary/50 hover:bg-primary/80 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all hover:text-black"
+              >
+                RSVP - stay in the loop
+              </button>
+              <button
+                className="btn-padding bg-primary text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all"
+                onClick={() => {
+                  window.open("https://td.nickwhiteworld.com/game", "_blank");
+                }}
+              >
+                Latest Release
+              </button>
+            </div>
 
-          {/* // ! Mobile Laylo Widget Section - Absolute positioned overlay */}
-          <div
-            className={`absolute top-[110%] right-0 left-0 z-50 transition-all duration-300 ${
-              isWidgetVisible
-                ? "translate-y-0 opacity-100"
-                : "pointer-events-none -translate-y-4 opacity-0"
-            }`}
-          >
-            <LayloWidget
-              isVisible={isWidgetVisible}
-              apiKey={import.meta.env.VITE_LAYLO_API_KEY}
-              mobile={true}
-            />
+            {/* // ! Mobile Laylo Widget Section - Absolute positioned overlay */}
+            <div
+              className={`absolute top-[110%] right-0 left-0 z-50 transition-all duration-300 ${
+                isWidgetVisible
+                  ? "translate-y-0 opacity-100"
+                  : "pointer-events-none -translate-y-4 opacity-0"
+              }`}
+            >
+              <LayloWidget
+                isVisible={isWidgetVisible}
+                apiKey={import.meta.env.VITE_LAYLO_API_KEY}
+                mobile={true}
+              />
+            </div>
           </div>
         </div>
       </div>
