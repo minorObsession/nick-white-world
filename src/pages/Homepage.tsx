@@ -136,9 +136,6 @@ function Homepage() {
                 >
                   Latest Release
                 </button>
-                <button className="btn-padding border-primary/50 hover:bg-primary/80 hover:bg-opacity-20 btn-hover-effect cursor-pointer rounded-full border-2 text-xl font-bold tracking-wider transition-all hover:text-black lg:text-2xl">
-                  Text for Updates
-                </button>
               </div>
             </div>
           </div>
