@@ -43,6 +43,13 @@ function Homepage() {
           </div>
           <div className="flex flex-col gap-3">
             <button
+              onMouseEnter={() => setIsWidgetVisible(true)}
+              onTouchStart={() => setIsWidgetVisible(true)}
+              className="btn-padding border-primary/50 hover:bg-primary/80 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all hover:text-black"
+            >
+              RSVP - stay in the loop
+            </button>
+            <button
               className="btn-padding bg-primary text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all"
               onClick={() => {
                 window.open("https://td.nickwhiteworld.com/game", "_blank");
@@ -51,13 +58,6 @@ function Homepage() {
               Latest Release
             </button>
             {/* // ! Text for updates button */}
-            <button
-              onMouseEnter={() => setIsWidgetVisible(true)}
-              onTouchStart={() => setIsWidgetVisible(true)}
-              className="btn-padding border-primary/50 hover:bg-primary/80 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all hover:text-black"
-            >
-              RSVP - stay in the loop
-            </button>
           </div>
 
           {/* // ! Mobile Laylo Widget Section - Absolute positioned overlay */}
