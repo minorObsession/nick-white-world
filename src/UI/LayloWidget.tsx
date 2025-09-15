@@ -66,6 +66,10 @@ function LayloWidget({
         });
 
         const result: SubscriptionResponse = await response.json();
+        
+        // Debug logging
+        console.log(`Phone format ${format} response:`, result);
+        console.log(`Phone format ${format} status:`, response.status);
 
         if (!result.errors && result.data?.subscribeToUser) {
           console.log(`Success with phone format: ${format}`);
@@ -74,6 +78,7 @@ function LayloWidget({
           result.errors &&
           !result.errors[0].message.includes("nationalNumber")
         ) {
+          console.error(`Phone format ${format} errors:`, result.errors);
           // If it's not a format error, don't try other formats
           return { success: false, error: result.errors[0].message };
         }
@@ -91,6 +96,11 @@ function LayloWidget({
     setMessage("");
 
     try {
+      // Debug logging for production
+      console.log("Laylo API Key:", apiKey ? `${apiKey.substring(0, 20)}...` : "MISSING");
+      console.log("Subscription type:", subscriptionType);
+      console.log("Environment:", import.meta.env.MODE);
+      
       // const variables: { email?: string; phoneNumber?: string } = {};
 
       if (subscriptionType === "email" && email) {
@@ -111,8 +121,13 @@ function LayloWidget({
         });
 
         const result: SubscriptionResponse = await response.json();
+        
+        // Debug logging
+        console.log("Email subscription response:", result);
+        console.log("Response status:", response.status);
 
         if (result.errors) {
+          console.error("Email subscription errors:", result.errors);
           setMessage(`Error: ${result.errors[0].message}`);
         } else if (result.data?.subscribeToUser) {
           setMessage("Successfully subscribed! 🎉");
@@ -132,11 +147,15 @@ function LayloWidget({
 
         // Try different phone number formats
         const phoneResult = await tryPhoneSubscription(phoneNumber);
+        
+        // Debug logging
+        console.log("Phone subscription result:", phoneResult);
 
         if (phoneResult.success) {
           setMessage("Successfully subscribed! 🎉");
           setPhoneNumber("");
         } else {
+          console.error("Phone subscription failed:", phoneResult.error);
           setMessage(
             `Error: ${phoneResult.error || "Unable to subscribe with this phone number"}`
           );
