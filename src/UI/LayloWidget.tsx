@@ -66,7 +66,7 @@ function LayloWidget({
         });
 
         const result: SubscriptionResponse = await response.json();
-        
+
         // Debug logging
         console.log(`Phone format ${format} response:`, result);
         console.log(`Phone format ${format} status:`, response.status);
@@ -97,10 +97,13 @@ function LayloWidget({
 
     try {
       // Debug logging for production
-      console.log("Laylo API Key:", apiKey ? `${apiKey.substring(0, 20)}...` : "MISSING");
+      console.log(
+        "Laylo API Key:",
+        apiKey ? `${apiKey.substring(0, 20)}...` : "MISSING"
+      );
       console.log("Subscription type:", subscriptionType);
       console.log("Environment:", import.meta.env.MODE);
-      
+
       // const variables: { email?: string; phoneNumber?: string } = {};
 
       if (subscriptionType === "email" && email) {
@@ -121,7 +124,7 @@ function LayloWidget({
         });
 
         const result: SubscriptionResponse = await response.json();
-        
+
         // Debug logging
         console.log("Email subscription response:", result);
         console.log("Response status:", response.status);
@@ -147,7 +150,7 @@ function LayloWidget({
 
         // Try different phone number formats
         const phoneResult = await tryPhoneSubscription(phoneNumber);
-        
+
         // Debug logging
         console.log("Phone subscription result:", phoneResult);
 
