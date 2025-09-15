@@ -42,7 +42,12 @@ function Homepage() {
             </h2>
           </div>
           <div className="flex flex-col gap-3">
-            <button className="btn-padding bg-primary text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all">
+            <button
+              className="btn-padding bg-primary text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all"
+              onClick={() => {
+                window.open("https://td.nickwhiteworld.com/game", "_blank");
+              }}
+            >
               Latest Release
             </button>
             {/* // ! Text for updates button */}
@@ -123,7 +128,12 @@ function Homepage() {
               </div>
               {/* // ! Buttons */}
               <div className="z-[100] flex gap-8">
-                <button className="bg-primary btn-padding text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-xl font-bold tracking-wider transition-all lg:text-2xl">
+                <button
+                  className="bg-primary btn-padding text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-xl font-bold tracking-wider transition-all lg:text-2xl"
+                  onClick={() => {
+                    window.open("https://td.nickwhiteworld.com/game", "_blank");
+                  }}
+                >
                   Latest Release
                 </button>
                 <button className="btn-padding border-primary/50 hover:bg-primary/80 hover:bg-opacity-20 btn-hover-effect cursor-pointer rounded-full border-2 text-xl font-bold tracking-wider transition-all hover:text-black lg:text-2xl">
