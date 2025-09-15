@@ -34,6 +34,12 @@ function LayloWidget({
     "phone"
   );
 
+  // Debug logging on component render
+  console.log("=== LAYLO WIDGET RENDERED ===");
+  console.log("Widget visible:", isVisible);
+  console.log("API Key passed:", !!apiKey);
+  console.log("Environment:", import.meta.env.MODE);
+
   // Helper function to try different phone number formats
   const tryPhoneSubscription = async (phoneNumber: string) => {
     const phoneFormats = [
@@ -95,14 +101,19 @@ function LayloWidget({
     setIsLoading(true);
     setMessage("");
 
+    // Debug logging - ALWAYS show these
+    console.log("=== LAYLO FORM SUBMITTED ===");
+    console.log("Form submission triggered!");
+    console.log("API Key exists:", !!apiKey);
+    console.log("API Key preview:", apiKey ? `${apiKey.substring(0, 20)}...` : "MISSING");
+    console.log("Subscription type:", subscriptionType);
+    console.log("Environment:", import.meta.env.MODE);
+    console.log("Raw env var:", import.meta.env.VITE_LAYLO_API_KEY ? "PRESENT" : "MISSING");
+    
+    // Also show alert for immediate feedback
+    alert(`Form submitted! API Key: ${apiKey ? "Present" : "MISSING"}, Type: ${subscriptionType}, Env: ${import.meta.env.MODE}`);
+
     try {
-      // Debug logging for production
-      console.log(
-        "Laylo API Key:",
-        apiKey ? `${apiKey.substring(0, 20)}...` : "MISSING"
-      );
-      console.log("Subscription type:", subscriptionType);
-      console.log("Environment:", import.meta.env.MODE);
 
       // const variables: { email?: string; phoneNumber?: string } = {};
 
