@@ -41,6 +41,10 @@
     @apply from-deep-navy to-dark-slate bg-gradient-to-br backdrop-blur-sm;
   }
 
+  .favicon { 
+    border-radius: 50%;
+    display: none;
+  }
   /* todo: better colors for this transition */
   .magic-text {
     background: linear-gradient(
