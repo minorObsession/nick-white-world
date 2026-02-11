@@ -62,6 +62,7 @@ function SocialIcons() {
         }}
       />
       <Icon
+        enlarge
         icon={SlSocialYoutube}
         color="text-[#FF0000]"
         shadowColor="rgba(255,0,0,1)"
