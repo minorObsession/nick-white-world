@@ -122,7 +122,7 @@ function Homepage() {
                 <h1 className="text-display from-primary/90 to-primary/70 bg-gradient-to-r bg-clip-text text-6xl leading-tight font-bold tracking-tight text-transparent drop-shadow-lg lg:text-7xl">
                   NICK WHITE
                 </h1>
-                <h2 className="text-accent translate-x-2 -translate-y-8 text-3xl font-bold tracking-wider lg:text-4xl">
+                <h2 className="text-accent text-primary translate-x-2 -translate-y-8 text-3xl font-bold tracking-wider lg:text-4xl">
                   Find ur <span className="magic-text">Magic</span>
                 </h2>
               </div>

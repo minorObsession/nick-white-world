@@ -12,7 +12,7 @@ import Icon from "./Icon";
 
 function SocialIcons() {
   return (
-    <article id="social" className="flex gap-6 items-center h-10">
+    <article id="social" className="flex h-10 items-center gap-6">
       {/* ! add hrefs */}
       <Icon
         icon={SlSocialSpotify}
@@ -44,21 +44,6 @@ function SocialIcons() {
         }}
       />
 
-      <div>
-        
-      </div>
-            <Icon
-            enlarge
-        icon={FaShopify}
-        color="text-[#96bf48]"
-        shadowColor="rgb(150, 191, 72, 0.3)"
-        onClick={() => {
-          window.open("https://jwchzm-he.myshopify.com", "_blank");
-        }}
-      />
-      <div>
-        
-      </div>
       <Icon
         icon={SiTiktok}
         color="text-[#ffffff]"
@@ -67,7 +52,15 @@ function SocialIcons() {
           window.open("https://www.tiktok.com/@nickwhiteworld", "_blank");
         }}
       />
-
+      <Icon
+        enlarge
+        icon={FaShopify}
+        color="text-[#96bf48]"
+        shadowColor="rgb(150, 191, 72, 0.3)"
+        onClick={() => {
+          window.open("https://jwchzm-he.myshopify.com", "_blank");
+        }}
+      />
       <Icon
         icon={SlSocialYoutube}
         color="text-[#FF0000]"
@@ -87,7 +80,6 @@ function SocialIcons() {
           window.open("https://x.com/nickwhiteworld", "_blank");
         }}
       />
-
     </article>
   );
 }
