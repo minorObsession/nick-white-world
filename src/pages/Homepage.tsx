@@ -52,7 +52,10 @@ function Homepage() {
               <button
                 className="btn-padding bg-primary text-dark-slate border-primary/50 btn-hover-effect cursor-pointer rounded-full border-2 text-lg font-bold tracking-wide transition-all"
                 onClick={() => {
-                  window.open("https://td.nickwhiteworld.com/game", "_blank");
+                  window.open(
+                    "https://td.nickwhiteworld.com/stars-instrumental",
+                    "_blank"
+                  );
                 }}
               >
                 Latest Release
